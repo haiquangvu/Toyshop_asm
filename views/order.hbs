@@ -1,0 +1,75 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8">
+    <title>How to create a responsive personal portfolio website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> --}}
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/orderlist">Cart</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+<div class="container col-md-8 mt-6 mb-4">
+   <div class="row">
+      <div class="col">
+         <h1>{{ toy.name }}</h1>
+         <img src="{{toy.image}}" width="350" height="350">
+      </div>
+      <div class="col">
+         <table class="table table-bordered">
+            <tr>
+               <th colspan="2">TOY INFORMATION</th>
+            </tr>
+            <tr>
+               <th>Toy Manufacturer</th>
+               <td>{{ toy.manufacturer }}</td>
+            </tr>
+            <tr>
+               <th>Toy Size</th>
+               <td>{{ toy.size }}</td>
+            </tr>
+            <tr>
+               <th>Toy Material</th>
+               <td>{{ toy.material }}</td>
+            </tr>
+            <tr>
+               <th>Toy Price</th>
+               <td>${{ toy.price }}</td>
+            </tr>
+            <tr>
+               <th>In stock</th>
+               <td>{{ toy.stock_quantity }}</td>
+            </tr>
+            <tr class="text-center">
+               <th colspan="2">
+                  <form action="/confirm" method="post">
+                     <input type="hidden" name="name" value="{{ toy.name }}">
+                     <input type="hidden" name="price" value="{{ toy.price }}">
+                     <input type="number" name="quantity" min="1" max="{{ toy.stock_quantity }}">
+                     <input type="submit" class="btn btn-primary" value="ORDER"></input>
+                  </form>
+               </th>
+            </tr>
+         </table>
+      </div>
+   </div>
+

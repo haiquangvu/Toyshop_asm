@@ -1,0 +1,59 @@
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+<form class="bg-light text-center col-md-8" action="/edit/{{toy._id}}" method="post">
+   <div>
+      <h1 class="text text-primary">Edit toys</h1>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Name</label>
+      <input class="form-control" type="text" name="name" value="{{ toy.name }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Stock Quantity </label>
+      <input class="form-control" type="number" name="stock_quantity" value="{{ toy.stock_quantity }}" required>
+   </div>
+      <div class="form-group mt-3">
+      <label class="text text-success">Manufacturer</label>
+      <input class="form-control" type="text" name="manufacturer" value="{{ toy.manufacturer }}" required>
+   </div>
+      <div class="form-group mt-3">
+      <label class="text text-success">Size</label>
+      <input class="form-control" type="text" name="size" value="{{ toy.size }}" required>
+   </div>
+      <div class="form-group mt-3">
+      <label class="text text-success">Material</label>
+      <input class="form-control" type="text" name="material" value="{{ toy.material }}" required>
+   </div>
+
+   <div class="form-group mt-3">
+      <label class="text text-success">Price</label>
+      <input class="form-control" type="number" name="price" value="{{ toy.price }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Image</label><br>
+      <img src="{{ toy.image}}" width="100" height="100"><br>
+      <input class="form-control" type="text" name="image" value="{{ toy.image }}" required>
+   </div>
+
+   <div class="form-group mt-3">
+      <input class="btn btn-danger" type="submit" value="Edit">
+   </div>
+</form>

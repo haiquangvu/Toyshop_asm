@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+<head>
+
+    <meta charset="UTF-8">
+    <title>How to create a responsive personal portfolio website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/orderlist">Cart</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="banner">
+        <h1 class="text text-warning mb-2 text-center">Fast and furious </h1>
+<div class="card-group text-center">
+   <div class="row">
+      {{#each toy }}
+      <div class="card col-md-2 m-3">
+         <img class="card-img-top mt-3" src="{{ image }}" width="120" height="150">
+         <div class="card-body">
+            <h4 class="card-title text-success">{{ name }}</h4>
+            <h3 class="card-title text-danger">${{ price }}</h3>
+               <a class="btn" href="/order/{{_id}}">Buy</a>
+            </form>
+         </div>
+      </div>
+      {{/each}}
+   </div>
+</div>

@@ -1,0 +1,65 @@
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/orderlist">Cart</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+
+<div class="container text-center col-md-9 mt-3 mb-3 bg-light">
+   <table class="table table-bordered">
+      <tr>
+         <th colspan="4">
+            <h1 class="text text-secondary">TOY LIST</h1>
+         <th>
+            <a class="btn btn-primary" href="/add">Add</a>
+            <a class="btn btn-secondary" href="/deleteall">Delete All</a>
+         </th>
+         </th>
+      </tr>
+      <tr>
+         <th  class="text text-success h5">Name </th>
+         <th  class="text text-success h5">Stock quantity</th>
+         <th  class="text text-success h5">Manufacturer</th>
+         <th  class="text text-success h5">Size</th>
+         <th  class="text text-success h5">Material</th>
+         <th  class="text text-success h5">Price</th>
+         <th  class="text text-success h5">Image</th>
+      </tr>
+      {{#each toy }}
+      <tr>
+         <td>{{ name  }}</td>
+         <td>${{ stock_quantity }}</td>
+         <td>{{ manufacturer }}</td>
+         <td>{{ size }}</td>
+         <td>${{ material }}</td>
+         <td>{{ price }}</td>
+         <td>
+            <a href="/detail/{{ _id }}">
+               <img src="{{ image}}" width="100" height="100">
+            </a>
+         
+         </td>
+         <td>
+            <a class="btn btn-warning" href="/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/delete/{{_id}}"
+            onclick="return confirm('Are you sure to delete this toy ?');"
+            >Delete</a>
+         </td>
+      </tr>
+      {{/each}}
+   </table>
+</div>

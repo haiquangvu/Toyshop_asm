@@ -1,0 +1,56 @@
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/orderlist">Cart</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+      
+<div class="col">
+   <div class="row">
+      <h1 class="text text-primary text-center">TOY ORDER</h1>
+   </div>
+   <div class="row">
+      <table class="table table-bordered text-center">
+         <tr>
+            {{!-- <th colspan="2">
+               <img src="{{ image }}" width="300" height="300">
+            </th> --}}
+         </tr>
+         <tr> 
+            <th>Toy name</th>
+            <th> {{ name }} </th>
+         </tr>
+         <tr>
+            <th>Toy price</th>
+            <th>$ {{ price }} </th>
+         </tr>
+         <tr>
+            <th>Order quantity</th>
+            <th> {{ quantity }} </th>
+         </tr>
+         <tr>
+            <th>Total price</th>
+            <th>$ {{ total }} </th>
+         </tr>
+         <tr class="text-center">
+            <th colspan="2">
+               <a class="btn btn-danger" href="/orderlist">Confirm</a>
+            </th>
+         </tr>
+      </table>
+   </div>
+</div>

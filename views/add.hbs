@@ -1,0 +1,68 @@
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h5>F&<span>F</span></h5>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/list">Admin</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <style>
+   .center-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+   }
+   </style>
+    <div class="banner">
+      <div class = "center-form">
+<form class="bg-light text-center col-md-8" action="/add" method="post">
+   <div>
+      <h1 class="text text-primary">Add new toys</h1>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Name</label>
+      <input class="form-control" type="text" name="name" required>
+   </div>
+      <div class="form-group mt-3">
+      <label class="text text-success">Stock Quantity</label>
+      <input class="form-control" type="number" name="stock_quantity" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Manufacturer</label>
+      <input class="form-control" type="text" name="manufacturer" required>
+   </div>
+     <div class="form-group mt-3">
+      <label class="text text-success">Size</label>
+      <input class="form-control" type="text" name="size" required>
+   </div>
+    <div class="form-group mt-3">
+      <label class="text text-success">Material</label>
+      <input class="form-control" type="text" name="material" required>
+   </div>
+    <div class="form-group mt-3">
+      <label class="text text-success">Price</label>
+      <input class="form-control" type="number" name="price" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Image</label>
+      <input class="form-control" type="text" name="image" required>
+   </div>
+  
+   <div class="form-group mt-3">
+      <input class="btn btn-danger" type="submit" value="Add">
+   </div>
+</form>
+</div>
